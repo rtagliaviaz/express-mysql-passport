@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 1rem 1rem;
+}
+
+.links{
+  margin: 0 0 0 auto;
+  display: flex;
+}
+
+
+.nav li {
+  margin: 1rem;
+}
+
+/* .dropbtn {
+  background-color: #4CAF50;
+  color: white; 
+  padding: 16px;
+  font-size: 16px; 
+  border: none;
+  cursor: pointer;
+} */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 6rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.4rem 0;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+/*
+  DATOS
+*/
+
+.datos-pic {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+/* .card {
+  border: none;
+} */
+
+.datos-pic img {
+  width: 70%;
+}
+
+.datos-button {
+  display: flex;
+  justify-content: center;
+}
+
+.datos-button a{
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px; 
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  width: 70%;
+  align-self: center;
+  transition: .5s;
+}
+
+.datos-button a:hover {
+  background-color: #2e2d2d;
+  color: white;
+}
+
+.form {
+  /* display: block; */
+  /* border: 2px solid black; */
+  /* border-radius: 5px; */
+  width: 20rem;
+  height: 15rem;
+  margin: 2rem auto;
+}
+
+.form h4 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.form-input {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  margin: 1.2rem 0;
+}
+
+ .form-input input{
+  border: none;
+  border-bottom: 1px solid black;
+} 
+
+.form-input input:focus{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+
+
+/* input background when autocomplete*/
+.form-input input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-input input[type=submit],
+.datos-button a{
+  border: 1px solid black;
+  border-radius: 5px; 
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  width: 70%;
+  align-self: center;
+  transition: .5s;
+}
+
+.form-input input[type=submit]:hover,
+.datos-button a:hover {
+  background-color: #2e2d2d;
+  color: white;
+}
+
+
+.form-input input[type=file] {
+  border: 1px solid black;
+  border-radius: 5px; 
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  width: 100%;
+  align-self: center;
+  transition: .5s;
+}
+
+.bdate {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* .form-input input[type=file]:hover {
+  background-color: #2e2d2d;
+  color: white;
+} */
+
+
+
+.form a {
+  text-align: center;
+  color: black;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nav li>a{
+  text-decoration: none;
+}
+
+
+/*
+  profile
+*/
+
+.profile {
+  margin: 2rem 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20%;
+  height: 70vh;
+}
+
+.profile h4 {
+  text-align: center;
+}
+
+.profile ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile a {
+  margin: 0.5rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.profile img {
+  width: 50%;
+  margin-left: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+/* 
+  flash msgs
+*/
+
+.flash-msg {
+  width: 30%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+

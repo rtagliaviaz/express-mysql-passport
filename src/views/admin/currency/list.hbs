@@ -1,0 +1,43 @@
+
+<div class="container my-4 p-4">
+  <div class="row">
+    <table class="table col-md-6 offset-md-3 my-4">
+          <thead class="thead-dark">
+            <tr>
+              <th>Currency</th>
+              <th>Code</th>
+              <th>Edit</th>
+              <th>Delete</th>              
+            </tr>
+            
+          </thead>
+
+          <tbody>
+            {{#each currency}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{code}}</td>
+              <td><a href="/admin/currency/edit/{{id}}" class="btn btn-secondary">Edit</a></td>
+              <td><a href="/admin/currency/delete/{{id}}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {{/each}}
+
+            <tr>
+              <td><a href="/admin/currency/add">+Add</a></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            {{!-- {{#each clients}}
+              
+              <tr>
+                <td>{{id}}</td>
+                <td>{{email}}</td>
+
+              </tr>
+              
+            {{/each}} --}}
+          </tbody>
+    </table>
+  </div>
+</div>

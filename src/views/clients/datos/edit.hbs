@@ -1,0 +1,63 @@
+<div class="form">
+  <h4>Datos</h4>
+  <form action="/datos/edit" method="POST" enctype="multipart/form-data">
+  {{#each userData}}
+    <div class="form-input">
+      <label for="firstname">
+        <b>First Name</b>
+      </label>
+      <input type="text" name="firstname" value="{{firstname}}"><br>
+    </div>
+    <div class="form-input">
+      <label for="lastname">
+        <b>Last Name</b>
+      </label>
+      <input type="text" name="lastname" value="{{lastname}}"><br>
+    </div>
+    <div class="form-input">
+      
+
+      <label >
+        <b>Birth Date</b>
+      </label>
+      <div class="bdate">
+      <div class="bdate-input">
+        <label for="bday"><b>Day</b></label>
+        <input type="number" name="bday" min="01" max="31" value="{{bday}}"><br>
+      </div>
+      <div class="bdate-input">
+        <label for="bmonth"><b>Month</b></label>
+      <select name="bmonth" value="{{bmonth}}">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+      </div>
+      <div class="bdate-input">
+        <label for="byear"><b>Year</b></label>
+        <input type="number" name="byear" min="1890" max="2010" value="{{byear}}"><br>
+      </div>
+      
+      </div>
+    </div>
+    <div class="form-input">
+      <label for="img">
+        <b>Profile Image</b>
+      </label>
+      <input type="file" name="image"><br>
+    </div>
+    <div class="form-input">
+      <input type="submit">
+    </div>
+    {{/each}}
+  </form>
+</div>

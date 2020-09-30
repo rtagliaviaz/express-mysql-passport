@@ -1,0 +1,53 @@
+<div class="form">
+  <h4>Edit Register</h4>
+      {{#each info}}
+  <form action="/ingresos/edit/{{id}}" method="POST">
+    <div class="form-input">
+      <label for="title">
+        <b>Title</b>
+      </label>
+      <input type="text" name="title" value="{{title}}"><br>
+    </div>
+    {{/each }}
+    <div class="form-input">
+      <label for="category">
+        <b>Category</b>
+      </label>
+      <select name="category">
+        {{#each general }}
+        <option value="{{title}}">{{title}}</option>
+        {{/each}}
+        {{#each personal }}
+        <option value="{{title}}">{{title}}</option>
+        {{/each}}
+      </select>
+    </div>
+    {{#each info}}
+    <div class="form-input">
+      <label for="description">
+        <b>Description</b>
+      </label>
+      <textarea name="description">{{description}}</textarea>
+    </div>
+    <div class="form-input">
+      <label for="currency">
+        <b>Currency</b>
+      </label>
+      <select name="currency">
+        {{#each currency}}
+        <option value="{{code}}">{{code}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="form-input">
+      <label for="amount">
+        <b>Amount</b>
+      </label>
+      <input type="number" value="{{amount}}" name="amount" min="0" max="1000000000">
+    </div>
+    <div class="form-input">
+      <input type="submit" value="Edit">
+    </div>
+  </form>
+  {{/each }}
+</div>

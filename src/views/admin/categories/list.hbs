@@ -1,0 +1,31 @@
+<h4>GLOBAL CATEGORIES</h4>
+
+<div class="container my-4 p-4">
+  <div class="row">
+    <table class="table my-4 col-md-8 offset-md-2">
+          <thead class="thead-dark">
+            <tr>
+              <th>Category Name</th>
+              <th>Type</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each categories}}
+              <tr>
+                <td>{{title}}</td>
+                <td>{{type}}</td>
+                <td><a href="/admin/categories/edit/{{id}}" class="btn btn-secondary">Edit</a></td>
+                <td><a href="/admin/categories/delete/{{id}}" class="btn btn-danger">Delete</a></td>
+              </tr>
+            {{/each}}
+
+              <tr>
+                <td><a href="/admin/categories/add">ADD</a></td>
+              </tr>
+          </tbody>
+    </table>
+  </div>
+</div>

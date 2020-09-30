@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="text-center mb-4">Datos</h4>
+          <div class="datos">
+            {{#each userData}}
+              {{#if image}}
+              <div class="datos-pic">
+                <img src="http://localhost:4000/img/{{image}}" alt="profile-picture">
+              </div>
+              {{/if}}
+            <div class="datos-info">
+              <b>First Name: </b>
+              {{#if firstname}}
+              <p>{{firstname}}</p>
+              {{else}}
+              <p></p>
+              {{/if}}
+
+              <b>Last Name: </b>
+              {{#if lastname}}
+              <p>{{lastname}}</p>
+              {{else}}
+              <p></p>
+              {{/if}}
+
+              <b>Birth Date: </b>
+              {{#if bday}}
+              <p>{{bday}}/{{bmonth}}/{{byear}}</p>
+              {{else}}
+              <p>dd/mm/yyyy</p>
+              {{/if}}
+            </div>
+            {{/each}}
+            
+            <div class="datos-button">
+              <a href="/datos/edit">EDIT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

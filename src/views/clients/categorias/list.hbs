@@ -1,0 +1,58 @@
+<h3>Categorias</h3>
+
+<h4>Categorias Generales</h4>
+<div class="container p-4">
+  <div class="row">
+    <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Category Name</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each generalCats}}
+              {{#if title}}
+              <tr>
+                <td>{{title}}</td>
+              </tr>
+              {{/if }}
+            {{/each}}
+          </tbody>
+    </table>
+  </div>
+</div>
+
+<h4>Categorias Personales</h4>
+
+
+<div class="container p-4">
+  <div class="row">
+    <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Category Name</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{#each personalCats}}
+              {{#if title}}
+              <tr>
+                <td>{{title}}</td>
+                <td><a href="/categorias/edit/{{id}}" class="btn btn-secondary">Edit</a></td>
+                <td><a href="/categorias/delete/{{id}}" class="btn btn-danger">Delete</a></td>
+              </tr>
+              {{/if }}
+            {{/each}}
+            <tr>
+              <td><a href="/categorias/add">Add a New Categorie</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+    </table>
+  </div>
+</div>

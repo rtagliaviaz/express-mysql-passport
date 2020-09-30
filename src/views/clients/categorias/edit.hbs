@@ -1,0 +1,18 @@
+<div class="form">
+  <h4>Edit Category</h4>
+  {{#each catInfo}}
+  <form action="/categorias/edit/{{id}}" method="POST">
+    
+    <div class="form-input">
+      <label for="title">
+        <b>Title</b>
+      </label>
+      <input type="text" name="title" value="{{title}}"><br>
+     
+    </div>
+    <div class="form-input">
+      <input type="submit" value="Edit">
+    </div>
+  </form>
+  {{/each}}
+</div>

@@ -1,0 +1,47 @@
+
+<ul class="nav">
+  <div class="nav-title">
+    <li>MYSQL APP</li>
+  </div>
+  <div class="links">
+    {{#if (isEq user.isadmin) }}
+      <li><a href="/admin/clients">Clients</a></li>
+      <li><a href="/admin/categories">Categories</a></li>
+      <li><a href="/admin/currency">Currency</a></li>
+      <li><a href="/admin/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Signout</a></li>
+    {{else}}
+      {{#if user}}
+      {{!-- DROPDOWN --}}
+        {{!-- <li class="dropdown">
+          <a  href="#" class="dropbtn">
+            button
+          </a>
+          <div class="dropdown-content">
+            <a class="" href="/console">All</a>
+            <a class="" href="/console/add">Add</a>
+          </div>
+        </li> --}}
+      {{!-- DROPDOWN --}}
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Signout</a></li>
+      {{else}}
+        <li><a href="/signup">SignUp</a></li>
+        <li><a href="/signin">Signin</a></li>
+      {{/if}}
+    {{/if}}
+  </div>
+  
+</ul>
+
+
+
+
+    {{!-- {{#if user}}
+      <li><a href="/logout">Signout</a></li>
+      <li><a href="/profile">Profile</a></li>
+    {{else}}
+      <li><a href="/signup">SignUp</a></li>
+      <li><a href="/signin">Signin</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+    {{/if}} --}}

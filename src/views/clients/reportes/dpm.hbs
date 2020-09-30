@@ -1,0 +1,124 @@
+<form action="/reportes/dpm" method="POST">
+<select name="month" value="month">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<input type="submit" >
+</form>
+
+<canvas id="myChart"></canvas>
+
+{{!-- chart.js --}}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  
+
+<script>
+    //https://stackoverflow.com/questions/59401776/chart-js-how-to-push-a-collection-of-array-into-dataset
+const bla = {{{days}}} //initialData
+//console.log(bla)
+//console.log(Object.values(bla)[0])
+console.log(bla)
+
+/*
+    barChardData
+    
+*/
+
+
+
+let barChartData = {
+    //labels: Object.keys(bla),
+    labels: [],
+    datasets: [{
+        label: 'Outcomes from current month',
+        data: [],
+        borderWidth: 2
+    }]
+}
+
+/*
+ciclo for para obtener los dias del mes de 1 a 31 y asignarlo a labels
+*/
+
+for (let y = 0; y < 31; y++) {
+    //console.log(y)
+    barChartData.labels.push(
+        y+1
+    )
+}
+
+/*
+    for loop para obtener el total de egresos por dia y poblar el arreglo data de datasets
+*/
+
+for (let i = 0; i < 30; i++) {
+    //console.log(Object.values(bla[i][0]))
+    //console.log(bla[i][0].total_outcome ) 
+    barChartData.datasets[0].data.push(
+        bla[i][0].total_outcome    
+    )
+}
+
+/*
+options
+*/
+
+let barChartOptions = {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+    
+}
+
+
+let ctx = document.getElementById('myChart').getContext('2d');
+window.myBar = new Chart(ctx, {
+  type: 'bar',
+  data: barChartData, 
+  options: barChartOptions
+});
+
+
+
+
+//console.log(bla)
+/*
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {  
+        labels: ['1', '2', '3', '4', '5', '6'],
+        datasets: [{
+            label: 'gastos septiembre',
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});*/
+
+
+
+</script>

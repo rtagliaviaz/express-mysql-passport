@@ -1,0 +1,24 @@
+<div class="form">
+  <h4>Edit Currency</h4>
+  {{#each currency}}
+  <form action="/admin/currency/edit/{{id}}" method="POST">
+    
+    <div class="form-input">
+      <label for="name">
+        <b>Currency</b>
+      </label>
+      <input type="text" name="name" value="{{name}}"><br>
+    </div>
+    <div class="form-input">
+      <label for="code">
+        <b>Code</b>
+      </label>
+      <input type="text" name="code" value="{{code}}"><br>
+    </div>
+    <div class="form-input">
+      <input type="submit" value="Edit">
+    </div>
+    
+  </form>
+  {{/each}}
+</div>

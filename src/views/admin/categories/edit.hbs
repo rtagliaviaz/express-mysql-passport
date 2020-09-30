@@ -1,0 +1,25 @@
+<div class="form">
+  <h4>Edit</h4>
+  {{#each categories}}
+  <form action="/admin/categories/edit/{{id}}" method="POST">
+    <div class="form-input">
+      <label for="title">
+        <b>Title</b>
+      </label>
+      <input type="text" name="title" value="{{title}}"><br>
+    </div>
+    <div class="form-input">
+      <label for="type">
+        <b>Type</b>
+      </label>
+      <select name="type" >
+        <option value="income">Income</option>
+        <option value="outcome">Outcome</option>
+      </select>
+    </div>
+    <div class="form-input">
+      <input type="submit" value="Edit">
+    </div>
+  </form>
+  {{/each}}
+</div>
